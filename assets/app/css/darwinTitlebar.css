@@ -13,7 +13,7 @@
     display: block;
     line-height: 45px;
     left: 0;
-    transform: translate(-82px, 4px);
+    transform: translate(-82px, 1px);
 }
 
 [legcord-platform="darwin"] #window-controls-container:hover #minimize #minimize-icon,

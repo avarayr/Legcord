@@ -25,30 +25,7 @@ export function RegisteredGamesPage() {
         <>
             <Header tag={HeaderTags.H1}>Registered Games</Header>
             <Divider mt mb />
-            <div class={classes.addBox}>
-                <Dropdown
-                    value={selectedDetectable()}
-                    onChange={(e) => {
-                        const detectable = e.currentTarget.value;
-                        if (detectable === "refresh") {
-                            getDetectables();
-                            setSelectedDetectable("");
-                            console.log("Detectables refreshed");
-                        } else {
-                            console.log("Selected detectable:", detectable);
-                            setSelectedDetectable(e.currentTarget.value);
-                        }
-                    }}
-                >
-                    <For each={detectables()}>
-                        {(process: ProcessInfo) => <option value={process[1]}>{process[1]}</option>}
-                    </For>
-                    <option value={"refresh"}>Refresh list</option>
-                </Dropdown>
-                <Button size={ButtonSizes.MEDIUM} onClick={addGame}>
-                    Add
-                </Button>
-            </div>
+            <Header tag={HeaderTags.H2}>Legcord doesn't support adding games manually yet. Coming soon!</Header>
         </>
     );
 }
